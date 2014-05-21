@@ -1,0 +1,17 @@
+{
+  "name": "顔本の乱",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+  "description": "Facebookの顔アイコンと名前を歴史上の人物に変えます",
+  "web_accessible_resources": ["lib/jquery-2.0.2.min.map", "img/*.png"],
+  "content_scripts": [{
+    "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+    "css": [],
+    "js": [
+      "lib/jquery-2.0.2.min.js",
+      "myapp.js"
+    ],
+    "run_at":"document_end"
+  }]
+}
